@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="/pages/user_create/" method="POST">  <!-- 아이디,비번은 POST로 처리해줘야 함 -->
+        {% csrf_token %}  <!-- POST 요청시 CSRF 방지위한 필요한 토큰: 내가 만든 페이지에서 보낼 수 있는 최소한의 안전장치! -->
+        <input type="text" name="username">
+        <input type="password" name="pw">
+        <input type="submit" value="가입!">
+    </form>
+</body>
+</html>
