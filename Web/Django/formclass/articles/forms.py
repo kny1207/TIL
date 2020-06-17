@@ -1,11 +1,16 @@
 from django import forms
-from .models import Article
+from .models import Article, Comment
 
 # model과 연계하기 쉬운 form 생성
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         fields = ('title', 'content',)
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('content',)
 
 # 장고에서 정하고 있는 forms로 form tag 만들어주기 
 # => views.py의 new함수에서 양식보여주기
