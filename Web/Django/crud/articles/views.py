@@ -78,7 +78,6 @@ def edit(request, pk): # GET
         content = request.POST.get('content')
 
         # Database 조회 + 수정 + 저장
-        
         # 2. 수정
         article.title = title
         article.content = content

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Article Index</h1>
+<!-- new page로 이동할 수 있는 링크버튼 추가 -->
+<a href="{% url 'articles:new' %}">New</a>
+
+<ul>
+    {% for article in articles %}
+        <li>
+            <!-- 해당 게시글 눌렀을 때 detail(상세페이지)로 넘어갈 수 있는 기능 추가 -->
+            <a href="{% url 'articles:detail' article.pk %}">{{article.title}}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
