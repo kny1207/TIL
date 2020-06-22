@@ -5,12 +5,13 @@ from .models import Article, Comment
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ('title', 'content',)
+        fields = ('title', 'content', 'image', )
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('content',)
+
 
 # 장고에서 정하고 있는 forms로 form tag 만들어주기 
 # => views.py의 new함수에서 양식보여주기

@@ -23,9 +23,10 @@ def new(request):
 
         # title = request.POST.get('title')
         # content = request.POST.get('content')
+        # image = request.FILES.get('image')
 
         # django form에서 정의한 class로 data 가져오기
-        form = ArticleForm(request.POST)
+        form = ArticleForm(request.POST, request.FILES)
 
         # 2-1. data 유효성 검사 - form class 기능
         if form.is_valid():
