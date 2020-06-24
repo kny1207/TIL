@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Sign Up</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <!-- as_p : 각 form을 p태그로 감싸서 
+        한줄씩 출력되도록 해줌 -->
+    {{ form.as_p }}
+    <input type="submit" value="Sign up">
+</form>
+
+{% endblock %}
