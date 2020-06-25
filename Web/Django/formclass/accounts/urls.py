@@ -11,4 +11,7 @@ urlpatterns = [
     path('delete/', views.delete, name='delete'), # User [D]elete
     path('edit/', views.edit, name='edit'), # User [U]pdate
     path('password/', views.password, name='password'), # (Password) [U]pdate
+    path('profile/', views.profile_detail, name='profile_detail'), # Proifle [R]ead
+    path('profile/edit/', views.profile_edit, name='profile_edit'), # profile [U]pdatae
+    path('<str:username>/', views.profile, name='profile'),
 ]

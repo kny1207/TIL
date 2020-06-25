@@ -4,11 +4,15 @@
 
 <h1>Sign Up</h1>
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <!-- as_p : 각 form을 p태그로 감싸서 
         한줄씩 출력되도록 해줌 -->
+    <h2>User</h2>
     {{ form.as_p }}
+
+    <h2>Profile</h2>
+    {{ profile_form.as_p }}
     <input type="submit" value="Sign up">
 </form>
 
